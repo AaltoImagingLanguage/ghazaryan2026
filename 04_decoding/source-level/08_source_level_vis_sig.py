@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Thu Feb 19 15:22:36 2026
-
-@author: ghazarg1
+Plots source-level decoding results.
+@author: Gayane Ghazaryan
 """
 
 import pandas as pd
@@ -14,7 +13,7 @@ import matplotlib
 import os
 
 os.environ["SUBJECTS_DIR"] = "data"
-src = mne.read_source_spaces("data/fsaverage-ico4-src.fif")
+src = mne.read_source_spaces("data/fsaverage/fsaverage-ico4-src.fif")
 
 DATA_PATH = "data"
 all_levels_df = pd.read_csv(f"{DATA_PATH}/source_decoding_all_merged.csv")
